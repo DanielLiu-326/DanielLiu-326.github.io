@@ -1,0 +1,227 @@
+<!DOCTYPE html><html lang="zh-CN" data-theme="light"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=edge"><meta name="viewport" content="width=device-width, initial-scale=1.0,viewport-fit=cover"><title>让 Gnome 更加易用和流畅 | Daniel的博客</title><meta name="author" content="Daniel Liu"><meta name="copyright" content="Daniel Liu"><meta name="format-detection" content="telephone=no"><meta name="theme-color" content="#ffffff"><meta name="description" content="本文介绍了 ArchLinux 在配置好基本的 Gnome 桌面后，可以选择的一些操作令 gnome 更加流畅">
+<meta property="og:type" content="article">
+<meta property="og:title" content="让 Gnome 更加易用和流畅">
+<meta property="og:url" content="https://danielliu-326.github.io/2023/10/29/gnome_optimization/index.html">
+<meta property="og:site_name" content="Daniel的博客">
+<meta property="og:description" content="本文介绍了 ArchLinux 在配置好基本的 Gnome 桌面后，可以选择的一些操作令 gnome 更加流畅">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://danielliu-326.github.io/images/top_images/index.jpg">
+<meta property="article:published_time" content="2023-10-29T03:37:37.000Z">
+<meta property="article:modified_time" content="2025-09-02T16:30:24.793Z">
+<meta property="article:author" content="Daniel Liu">
+<meta property="article:tag" content="Daniel">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://danielliu-326.github.io/images/top_images/index.jpg"><link rel="shortcut icon" href="/images/icon.png"><link rel="canonical" href="https://danielliu-326.github.io/2023/10/29/gnome_optimization/index.html"><link rel="preconnect" href="//cdn.jsdelivr.net"/><link rel="preconnect" href="//busuanzi.ibruce.info"/><link rel="stylesheet" href="/css/index.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free/css/all.min.css" media="print" onload="this.media='all'"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.min.css" media="print" onload="this.media='all'"><script>const GLOBAL_CONFIG = {
+  root: '/',
+  algolia: undefined,
+  localSearch: undefined,
+  translate: undefined,
+  noticeOutdate: undefined,
+  highlight: {"plugin":"highlighjs","highlightCopy":true,"highlightLang":true,"highlightHeightLimit":false},
+  copy: {
+    success: '复制成功',
+    error: '复制错误',
+    noSupport: '浏览器不支持'
+  },
+  relativeDate: {
+    homepage: false,
+    post: false
+  },
+  runtime: '天',
+  dateSuffix: {
+    just: '刚刚',
+    min: '分钟前',
+    hour: '小时前',
+    day: '天前',
+    month: '个月前'
+  },
+  copyright: {"limitCount":50,"languages":{"author":"作者: Daniel Liu","link":"链接: ","source":"来源: Daniel的博客","info":"著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。"}},
+  lightbox: 'fancybox',
+  Snackbar: undefined,
+  infinitegrid: {
+    js: 'https://cdn.jsdelivr.net/npm/@egjs/infinitegrid/dist/infinitegrid.min.js',
+    buttonText: '加载更多'
+  },
+  isPhotoFigcaption: false,
+  islazyload: false,
+  isAnchor: false,
+  percent: {
+    toc: true,
+    rightside: false,
+  },
+  autoDarkmode: false
+}</script><script id="config-diff">var GLOBAL_CONFIG_SITE = {
+  title: '让 Gnome 更加易用和流畅',
+  isPost: true,
+  isHome: false,
+  isHighlightShrink: false,
+  isToc: true,
+  postUpdate: '2025-09-03 00:30:24'
+}</script><noscript><style type="text/css">
+  #nav {
+    opacity: 1
+  }
+  #recent-posts time,
+  #post-meta time {
+    display: inline !important
+  }
+</style></noscript><script>(win=>{
+      win.saveToLocal = {
+        set: (key, value, ttl) => {
+          if (ttl === 0) return
+          const now = Date.now()
+          const expiry = now + ttl * 86400000
+          const item = {
+            value,
+            expiry
+          }
+          localStorage.setItem(key, JSON.stringify(item))
+        },
+      
+        get: key => {
+          const itemStr = localStorage.getItem(key)
+      
+          if (!itemStr) {
+            return undefined
+          }
+          const item = JSON.parse(itemStr)
+          const now = Date.now()
+      
+          if (now > item.expiry) {
+            localStorage.removeItem(key)
+            return undefined
+          }
+          return item.value
+        }
+      }
+    
+      win.getScript = (url, attr = {}) => new Promise((resolve, reject) => {
+        const script = document.createElement('script')
+        script.src = url
+        script.async = true
+        script.onerror = reject
+        script.onload = script.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          script.onload = script.onreadystatechange = null
+          resolve()
+        }
+
+        Object.keys(attr).forEach(key => {
+          script.setAttribute(key, attr[key])
+        })
+
+        document.head.appendChild(script)
+      })
+    
+      win.getCSS = (url, id = false) => new Promise((resolve, reject) => {
+        const link = document.createElement('link')
+        link.rel = 'stylesheet'
+        link.href = url
+        if (id) link.id = id
+        link.onerror = reject
+        link.onload = link.onreadystatechange = function() {
+          const loadState = this.readyState
+          if (loadState && loadState !== 'loaded' && loadState !== 'complete') return
+          link.onload = link.onreadystatechange = null
+          resolve()
+        }
+        document.head.appendChild(link)
+      })
+    
+      win.activateDarkMode = () => {
+        document.documentElement.setAttribute('data-theme', 'dark')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#0d0d0d')
+        }
+      }
+      win.activateLightMode = () => {
+        document.documentElement.setAttribute('data-theme', 'light')
+        if (document.querySelector('meta[name="theme-color"]') !== null) {
+          document.querySelector('meta[name="theme-color"]').setAttribute('content', '#ffffff')
+        }
+      }
+      const t = saveToLocal.get('theme')
+    
+        if (t === 'dark') activateDarkMode()
+        else if (t === 'light') activateLightMode()
+      
+      const asideStatus = saveToLocal.get('aside-status')
+      if (asideStatus !== undefined) {
+        if (asideStatus === 'hide') {
+          document.documentElement.classList.add('hide-aside')
+        } else {
+          document.documentElement.classList.remove('hide-aside')
+        }
+      }
+    
+      const detectApple = () => {
+        if(/iPad|iPhone|iPod|Macintosh/.test(navigator.userAgent)){
+          document.documentElement.classList.add('apple')
+        }
+      }
+      detectApple()
+    })(window)</script><meta name="generator" content="Hexo 6.3.0"></head><body><div id="sidebar"><div id="menu-mask"></div><div id="sidebar-menus"><div class="avatar-img is-center"><img src="https://q.qlogo.cn/g?b=qq&amp;nk=2370161748&amp;s=640" onerror="onerror=null;src='/img/friend_404.gif'" alt="avatar"/></div><div class="sidebar-site-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><hr class="custom-hr"/><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div></div></div><div class="post" id="body-wrap"><header class="post-bg fixed" id="page-header" style="background-image: url('/images/top_images/index.jpg')"><nav id="nav"><span id="blog-info"><a href="/" title="Daniel的博客"><img class="site-icon" src="/images/icon.png"/><span class="site-name">Daniel的博客</span></a></span><div id="menus"><div class="menus_items"><div class="menus_item"><a class="site-page" href="/"><i class="fa-fw fas fa-home"></i><span> 主页</span></a></div><div class="menus_item"><a class="site-page" href="/archives/"><i class="fa-fw fas fa-archive"></i><span> 归档</span></a></div><div class="menus_item"><a class="site-page" href="/tags/"><i class="fa-fw fas fa-tags"></i><span> 标签</span></a></div><div class="menus_item"><a class="site-page" href="/categories/"><i class="fa-fw fas fa-folder-open"></i><span> 分类</span></a></div><div class="menus_item"><a class="site-page" href="/link/"><i class="fa-fw fas fa-link"></i><span> 友链</span></a></div><div class="menus_item"><a class="site-page" href="/about/"><i class="fa-fw fas fa-heart"></i><span> 关于</span></a></div></div><div id="toggle-menu"><a class="site-page" href="javascript:void(0);"><i class="fas fa-bars fa-fw"></i></a></div></div></nav><div id="post-info"><h1 class="post-title">让 Gnome 更加易用和流畅</h1><div id="post-meta"><div class="meta-firstline"><span class="post-meta-date"><i class="far fa-calendar-alt fa-fw post-meta-icon"></i><span class="post-meta-label">发表于</span><time class="post-meta-date-created" datetime="2023-10-29T03:37:37.000Z" title="发表于 2023-10-29 11:37:37">2023-10-29</time><span class="post-meta-separator">|</span><i class="fas fa-history fa-fw post-meta-icon"></i><span class="post-meta-label">更新于</span><time class="post-meta-date-updated" datetime="2025-09-02T16:30:24.793Z" title="更新于 2025-09-03 00:30:24">2025-09-03</time></span><span class="post-meta-categories"><span class="post-meta-separator">|</span><i class="fas fa-inbox fa-fw post-meta-icon"></i><a class="post-meta-categories" href="/categories/Linux/">Linux</a></span></div><div class="meta-secondline"><span class="post-meta-separator">|</span><span class="post-meta-pv-cv" id="" data-flag-title="让 Gnome 更加易用和流畅"><i class="far fa-eye fa-fw post-meta-icon"></i><span class="post-meta-label">阅读量:</span><span id="busuanzi_value_page_pv"><i class="fa-solid fa-spinner fa-spin"></i></span></span></div></div></div></header><main class="layout" id="content-inner"><div id="post"><article class="post-content" id="article-container"><h1 id="1-使用-Wayland"><a href="#1-使用-Wayland" class="headerlink" title="1.使用 Wayland"></a>1.使用 Wayland</h1><p>Wayland 同 X11，都是Linux下的窗口界面协议，Wayland 的设计目标是用于取代 x11，并且 Wayland 相较于 X11 确实有更加好的性能表现。目前 Gnome 默认都会采用Wayland，但是对一些特殊的硬件或者系统状态做了特殊处理，可能不会采用Wayland。</p>
+<p>解决方法可见我的上一篇博文：<a href="https://danielliu-326.github.io/2023/09/01/gnome_wayland/">Gnome 开启 Wayland</a></p>
+<h1 id="2-使用-mutter-performance"><a href="#2-使用-mutter-performance" class="headerlink" title="2. 使用 mutter-performance"></a>2. 使用 mutter-performance</h1><p>aur 地址：<a href="aur.archlinux.org/packages/mutter-performance">aur.archlinux.org&#x2F;packages&#x2F;mutter-performance</a></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">yay -S mutter-performance</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-让-gnome-shell-默认使用集成显卡"><a href="#3-让-gnome-shell-默认使用集成显卡" class="headerlink" title="3. 让 gnome-shell 默认使用集成显卡"></a>3. 让 gnome-shell 默认使用集成显卡</h1><p>当正确安装 Nvidia 显卡驱动，并且使用Wayland时，gnome-shell 会直接使用 Nvidia 显卡；但是 Linux 向来与 Nvidia 不和，经测试，一旦gnome-shell运行在 Nvidia 显卡下时，经常会出现掉帧和撕裂等问题，且会增加功耗，所以，gnome-shell 完全没必要跑在 N 卡。</p>
+<p>检查你的 gnome-shell 是否在使用 N 卡，终端输入 <code>nvidia-smi</code>，如果输出结果如下图，则代表正在用 n 卡运行：</p>
+<p><img src="/home/danny/projects/others/blog/source/images/content_images/gnome_optimization/gnome_shell_uses_nvidia.png"></p>
+<p>参考本 <a target="_blank" rel="noopener" href="https://gitlab.gnome.org/GNOME/mutter/-/issues/2969#note_1872558">issue</a>下的评论 ，直接将<code>/usr/share/glvnd/egl_vendor.d/10_nvidia.json</code> 改为  <code>90_nvidia.json</code></p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">sudo mv /usr/share/glvnd/egl_vendor.d/10_nvidia.json /usr/share/glvnd/egl_vendor.d/90_nvidia.json</span><br></pre></td></tr></table></figure>
+
+<h1 id="4-让界面风格一致"><a href="#4-让界面风格一致" class="headerlink" title="4 让界面风格一致"></a>4 让界面风格一致</h1><p>GTK3 与 GTK4 的默认主题 adwaita 样式差距很大，并且 QT 软件与 GTK 相同，这里通过安装主题的方式让GTK3与GTK4看起来大致相同，QT目前还没有一个好的主题让它们相同。</p>
+<ol>
+<li><p>安装 adw-gtk3：</p>
+<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">yay -S adw-gtk3</span><br><span class="line">sudo pacman -Syu gnome-tweaks</span><br></pre></td></tr></table></figure>
+
+<p>并打开 Gnome 将主题设置为 adw-gtk3</p>
+</li>
+</ol>
+<h1 id="5-推荐插件"><a href="#5-推荐插件" class="headerlink" title="5. 推荐插件"></a>5. 推荐插件</h1><ul>
+<li><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/3193/blur-my-shell/">blur-my-shell</a>: 让你的 gnome-shell 透明+模糊，目前dash to dock模糊还有些问题（模糊不支持圆角） </li>
+<li><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/307/dash-to-dock/">dash-to-dock</a>：dock 栏</li>
+<li><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1460/vitals/">vitals</a>：gnome系统状态监视器工具</li>
+<li><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/2236/night-theme-switcher/">night-theme-switcher</a>：暗黑明亮主题切换工具</li>
+<li><a target="_blank" rel="noopener" href="https://extensions.gnome.org/extension/1262/bing-wallpaper-changer/">bing-wallpaper</a>：每日必应壁纸，Gnome下最好用的必应壁纸工具。</li>
+</ul>
+</article><div class="post-copyright"><div class="post-copyright__author"><span class="post-copyright-meta"><i class="fas fa-circle-user fa-fw"></i>文章作者: </span><span class="post-copyright-info"><a href="https://danielliu-326.github.io">Daniel Liu</a></span></div><div class="post-copyright__type"><span class="post-copyright-meta"><i class="fas fa-square-arrow-up-right fa-fw"></i>文章链接: </span><span class="post-copyright-info"><a href="https://danielliu-326.github.io/2023/10/29/gnome_optimization/">https://danielliu-326.github.io/2023/10/29/gnome_optimization/</a></span></div><div class="post-copyright__notice"><span class="post-copyright-meta"><i class="fas fa-circle-exclamation fa-fw"></i>版权声明: </span><span class="post-copyright-info">本博客所有文章除特别声明外，均采用 <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/" target="_blank">CC BY-NC-SA 4.0</a> 许可协议。转载请注明来自 <a href="https://danielliu-326.github.io" target="_blank">Daniel的博客</a>！</span></div></div><div class="tag_share"><div class="post-meta__tag-list"></div><div class="post_share"><div class="social-share" data-image="/images/top_images/index.jpg" data-sites="facebook,twitter,wechat,weibo,qq"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/css/share.min.css" media="print" onload="this.media='all'"><script src="https://cdn.jsdelivr.net/npm/butterfly-extsrc/sharejs/dist/js/social-share.min.js" defer></script></div></div><div class="post-reward"><div class="reward-button"><i class="fas fa-qrcode"></i>赞助</div><div class="reward-main"><ul class="reward-all"><li class="reward-item"><a href="/images/wechat_reward_qrcode.png" target="_blank"><img class="post-qr-code-img" src="/images/wechat_reward_qrcode.png" alt="wechat"/></a><div class="post-qr-code-desc">wechat</div></li></ul></div></div><nav class="pagination-post" id="pagination"><div class="prev-post pull-left"><a href="/2025/05/11/docker_openwrt/" title="双网口工控机 docker openwrt 作为主路由"><img class="cover" src="/images/top_images/index.jpg" onerror="onerror=null;src='/img/404.jpg'" alt="cover of previous post"><div class="pagination-info"><div class="label">上一篇</div><div class="prev_info">双网口工控机 docker openwrt 作为主路由</div></div></a></div><div class="next-post pull-right"><a href="/2023/09/01/gnome_wayland/" title="Gnome启用Wayland"><img class="cover" src="/images/top_images/gnome_wayland.webp" onerror="onerror=null;src='/img/404.jpg'" alt="cover of next post"><div class="pagination-info"><div class="label">下一篇</div><div class="next_info">Gnome启用Wayland</div></div></a></div></nav><hr class="custom-hr"/><div id="post-comment"><div class="comment-head"><div class="comment-headline"><i class="fas fa-comments fa-fw"></i><span> 评论</span></div></div><div class="comment-wrap"><div><div id="gitalk-container"></div></div></div></div></div><div class="aside-content" id="aside-content"><div class="card-widget card-info"><div class="is-center"><div class="avatar-img"><img src="https://q.qlogo.cn/g?b=qq&amp;nk=2370161748&amp;s=640" onerror="this.onerror=null;this.src='/img/friend_404.gif'" alt="avatar"/></div><div class="author-info__name">Daniel Liu</div><div class="author-info__description">太卧槽了</div></div><div class="card-info-data site-data is-center"><a href="/archives/"><div class="headline">文章</div><div class="length-num">4</div></a><a href="/tags/"><div class="headline">标签</div><div class="length-num">0</div></a><a href="/categories/"><div class="headline">分类</div><div class="length-num">1</div></a></div><a id="card-info-btn" target="_blank" rel="noopener" href="https://github.com/DanielLiu-326"><i class="fab fa-github"></i><span>Follow Me</span></a><div class="card-info-social-icons is-center"><a class="social-icon" href="https://github.com/DanielLiu-326" target="_blank" title="Github"><i class="fab fa-github" style="color: #24292e;"></i></a><a class="social-icon" href="mailto:lhlh326@outlook.com" target="_blank" title="Email"><i class="fas fa-envelope" style="color: #4a7dbe;"></i></a></div></div><div class="card-widget card-announcement"><div class="item-headline"><i class="fas fa-bullhorn fa-shake"></i><span>公告</span></div><div class="announcement_content">坚决谴责日本倾倒核废水事件！</div></div><div class="sticky_layout"><div class="card-widget" id="card-toc"><div class="item-headline"><i class="fas fa-stream"></i><span>目录</span><span class="toc-percentage"></span></div><div class="toc-content"><ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#1-%E4%BD%BF%E7%94%A8-Wayland"><span class="toc-number">1.</span> <span class="toc-text">1.使用 Wayland</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#2-%E4%BD%BF%E7%94%A8-mutter-performance"><span class="toc-number">2.</span> <span class="toc-text">2. 使用 mutter-performance</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#3-%E8%AE%A9-gnome-shell-%E9%BB%98%E8%AE%A4%E4%BD%BF%E7%94%A8%E9%9B%86%E6%88%90%E6%98%BE%E5%8D%A1"><span class="toc-number">3.</span> <span class="toc-text">3. 让 gnome-shell 默认使用集成显卡</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#4-%E8%AE%A9%E7%95%8C%E9%9D%A2%E9%A3%8E%E6%A0%BC%E4%B8%80%E8%87%B4"><span class="toc-number">4.</span> <span class="toc-text">4 让界面风格一致</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#5-%E6%8E%A8%E8%8D%90%E6%8F%92%E4%BB%B6"><span class="toc-number">5.</span> <span class="toc-text">5. 推荐插件</span></a></li></ol></div></div><div class="card-widget card-recent-post"><div class="item-headline"><i class="fas fa-history"></i><span>最新文章</span></div><div class="aside-list"><div class="aside-list-item"><a class="thumbnail" href="/2025/05/11/docker_openwrt/" title="双网口工控机 docker openwrt 作为主路由"><img src="/images/top_images/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="双网口工控机 docker openwrt 作为主路由"/></a><div class="content"><a class="title" href="/2025/05/11/docker_openwrt/" title="双网口工控机 docker openwrt 作为主路由">双网口工控机 docker openwrt 作为主路由</a><time datetime="2025-05-11T15:43:37.000Z" title="发表于 2025-05-11 23:43:37">2025-05-11</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/10/29/gnome_optimization/" title="让 Gnome 更加易用和流畅"><img src="/images/top_images/index.jpg" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="让 Gnome 更加易用和流畅"/></a><div class="content"><a class="title" href="/2023/10/29/gnome_optimization/" title="让 Gnome 更加易用和流畅">让 Gnome 更加易用和流畅</a><time datetime="2023-10-29T03:37:37.000Z" title="发表于 2023-10-29 11:37:37">2023-10-29</time></div></div><div class="aside-list-item"><a class="thumbnail" href="/2023/09/01/gnome_wayland/" title="Gnome启用Wayland"><img src="/images/top_images/gnome_wayland.webp" onerror="this.onerror=null;this.src='/img/404.jpg'" alt="Gnome启用Wayland"/></a><div class="content"><a class="title" href="/2023/09/01/gnome_wayland/" title="Gnome启用Wayland">Gnome启用Wayland</a><time datetime="2023-08-31T19:41:03.000Z" title="发表于 2023-09-01 03:41:03">2023-09-01</time></div></div><div class="aside-list-item no-cover"><div class="content"><a class="title" href="/2023/09/01/new_begining/" title="第一篇博客：新的开始">第一篇博客：新的开始</a><time datetime="2023-08-31T19:41:03.000Z" title="发表于 2023-09-01 03:41:03">2023-09-01</time></div></div></div></div></div></div></main><footer id="footer"><div id="footer-wrap"><div class="copyright">&copy;2020 - 2025 By Daniel Liu</div><div class="footer_custom_text">Hi, welcome to my <a target="_blank" rel="noopener" href="https://butterfly.js.org/">blog</a>!</div></div></footer></div><div id="rightside"><div id="rightside-config-hide"><button id="readmode" type="button" title="阅读模式"><i class="fas fa-book-open"></i></button><button id="darkmode" type="button" title="浅色和深色模式转换"><i class="fas fa-adjust"></i></button><button id="hide-aside-btn" type="button" title="单栏和双栏切换"><i class="fas fa-arrows-alt-h"></i></button></div><div id="rightside-config-show"><button id="rightside-config" type="button" title="设置"><i class="fas fa-cog fa-spin"></i></button><button class="close" id="mobile-toc-button" type="button" title="目录"><i class="fas fa-list-ul"></i></button><a id="to_comment" href="#post-comment" title="直达评论"><i class="fas fa-comments"></i></a><button id="go-up" type="button" title="回到顶部"><span class="scroll-percent"></span><i class="fas fa-arrow-up"></i></button></div></div><div><script src="/js/utils.js"></script><script src="/js/main.js"></script><script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui/dist/fancybox/fancybox.umd.min.js"></script><div class="js-pjax"><script>(() => {
+  const initGitalk = () => {
+    const gitalk = new Gitalk(Object.assign({
+      clientID: '55c7f9032b811b8b7c66',
+      clientSecret: '027e76ef955725ba40d99d7aa2dd408a29b249fb',
+      repo: 'DanielLiu-326.github.io',
+      owner: 'DanielLiu-326',
+      admin: ['DanielLiu-326'],
+      id: 'fc8e34e64daec8391ab70145ca25e47e',
+      updateCountCallback: commentCount
+    },null))
+
+    gitalk.render('gitalk-container')
+  }
+
+  const loadGitalk = async() => {
+    if (typeof Gitalk === 'function') initGitalk()
+    else {
+      await getCSS('https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.css')
+      await getScript('https://cdn.jsdelivr.net/npm/gitalk/dist/gitalk.min.js')
+      initGitalk()
+    }
+  }
+  
+  const commentCount = n => {
+    const isCommentCount = document.querySelector('#post-meta .gitalk-comment-count')
+    if (isCommentCount) {
+      isCommentCount.textContent= n
+    }
+  }
+
+  if ('Gitalk' === 'Gitalk' || !true) {
+    if (true) btf.loadComment(document.getElementById('gitalk-container'), loadGitalk)
+    else loadGitalk()
+  } else {
+    window.loadOtherComment = loadGitalk
+  }
+})()</script></div><script async data-pjax src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script></div></body></html>
